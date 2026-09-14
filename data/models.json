@@ -1,0 +1,629 @@
+{
+  "_note": "params_b = total parameters in billions (memory is driven by TOTAL params, even for MoE). kv_kb_per_token = KV cache size per token at fp16, derived from 2 * n_layers * n_kv_heads * head_dim * 2 bytes.",
+  "models": [
+    {
+      "id": "r1-distill-qwen-7b",
+      "name": "DeepSeek-R1-Distill-Qwen-7B",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 7.62,
+      "active_b": 7.62,
+      "kv_kb_per_token": 56,
+      "max_ctx": 131072,
+      "license": "MIT",
+      "released": "2025-01",
+      "tags": [
+        "reasoning",
+        "distill"
+      ]
+    },
+    {
+      "id": "r1-distill-qwen-14b",
+      "name": "DeepSeek-R1-Distill-Qwen-14B",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 14.8,
+      "active_b": 14.8,
+      "kv_kb_per_token": 192,
+      "max_ctx": 131072,
+      "license": "MIT",
+      "released": "2025-01",
+      "tags": [
+        "reasoning",
+        "distill"
+      ]
+    },
+    {
+      "id": "r1-distill-qwen-32b",
+      "name": "DeepSeek-R1-Distill-Qwen-32B",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 32.8,
+      "active_b": 32.8,
+      "kv_kb_per_token": 256,
+      "max_ctx": 131072,
+      "license": "MIT",
+      "released": "2025-01",
+      "tags": [
+        "reasoning",
+        "distill",
+        "large"
+      ]
+    },
+    {
+      "id": "r1-distill-llama-70b",
+      "name": "DeepSeek-R1-Distill-Llama-70B",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 70.6,
+      "active_b": 70.6,
+      "kv_kb_per_token": 320,
+      "max_ctx": 131072,
+      "license": "MIT",
+      "released": "2025-01",
+      "tags": [
+        "reasoning",
+        "heavy"
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 290.94,
+      "active_b": 290.94,
+      "kv_kb_per_token": 86,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-04",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 304.18,
+      "active_b": 304.18,
+      "kv_kb_per_token": 86,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-07",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek V4 Flash Vision Exp",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 304.65,
+      "active_b": 304.65,
+      "kv_kb_per_token": 86,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-08",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "DeepSeek R1",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 684.49,
+      "active_b": 37.44,
+      "kv_kb_per_token": 69,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2025-01",
+      "tags": [
+        "moe",
+        "auto-discovered"
+      ]
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 763.21,
+      "active_b": 763.21,
+      "kv_kb_per_token": 80,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-09",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
+      "id": "gemma-2-2b",
+      "name": "Gemma 2 2B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 2.61,
+      "active_b": 2.61,
+      "kv_kb_per_token": 84,
+      "max_ctx": 8192,
+      "license": "Gemma Terms",
+      "released": "2024-07",
+      "tags": [
+        "tiny"
+      ]
+    },
+    {
+      "id": "gemma-3-4b",
+      "name": "Gemma 3 4B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 4.3,
+      "active_b": 4.3,
+      "kv_kb_per_token": 136,
+      "max_ctx": 131072,
+      "license": "Gemma Terms",
+      "released": "2025-03",
+      "tags": [
+        "small",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "gemma-2-9b",
+      "name": "Gemma 2 9B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 9.24,
+      "active_b": 9.24,
+      "kv_kb_per_token": 336,
+      "max_ctx": 8192,
+      "license": "Gemma Terms",
+      "released": "2024-07",
+      "tags": [
+        "midrange",
+        "heavy-kv"
+      ]
+    },
+    {
+      "id": "gemma-3-12b",
+      "name": "Gemma 3 12B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 12.2,
+      "active_b": 12.2,
+      "kv_kb_per_token": 384,
+      "max_ctx": 131072,
+      "license": "Gemma Terms",
+      "released": "2025-03",
+      "tags": [
+        "midrange",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "gemma-2-27b",
+      "name": "Gemma 2 27B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 27.2,
+      "active_b": 27.2,
+      "kv_kb_per_token": 368,
+      "max_ctx": 8192,
+      "license": "Gemma Terms",
+      "released": "2024-07",
+      "tags": [
+        "large",
+        "heavy-kv"
+      ]
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma",
+      "vendor": "Google",
+      "params_b": 27.4,
+      "active_b": 27.4,
+      "kv_kb_per_token": 496,
+      "max_ctx": 131072,
+      "license": "Gemma Terms",
+      "released": "2025-03",
+      "tags": [
+        "large",
+        "multimodal",
+        "heavy-kv"
+      ]
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "family": "gpt-oss",
+      "vendor": "OpenAI",
+      "params_b": 20.9,
+      "active_b": 3.6,
+      "kv_kb_per_token": 48,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-08",
+      "tags": [
+        "moe",
+        "open-weight",
+        "fast-for-size"
+      ]
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "family": "gpt-oss",
+      "vendor": "OpenAI",
+      "params_b": 116.8,
+      "active_b": 5.1,
+      "kv_kb_per_token": 72,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-08",
+      "tags": [
+        "moe",
+        "open-weight",
+        "heavy"
+      ]
+    },
+    {
+      "id": "llama-3-2-1b",
+      "name": "Llama 3.2 1B",
+      "family": "Llama",
+      "vendor": "Meta",
+      "params_b": 1.24,
+      "active_b": 1.24,
+      "kv_kb_per_token": 32,
+      "max_ctx": 131072,
+      "license": "Llama 3.2 Community",
+      "released": "2024-09",
+      "tags": [
+        "tiny",
+        "on-device",
+        "fast"
+      ]
+    },
+    {
+      "id": "llama-3-2-3b",
+      "name": "Llama 3.2 3B",
+      "family": "Llama",
+      "vendor": "Meta",
+      "params_b": 3.21,
+      "active_b": 3.21,
+      "kv_kb_per_token": 112,
+      "max_ctx": 131072,
+      "license": "Llama 3.2 Community",
+      "released": "2024-09",
+      "tags": [
+        "small",
+        "on-device"
+      ]
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama",
+      "vendor": "Meta",
+      "params_b": 8.03,
+      "active_b": 8.03,
+      "kv_kb_per_token": 128,
+      "max_ctx": 131072,
+      "license": "Llama 3.1 Community",
+      "released": "2024-07",
+      "tags": [
+        "workhorse",
+        "general"
+      ]
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama",
+      "vendor": "Meta",
+      "params_b": 70.6,
+      "active_b": 70.6,
+      "kv_kb_per_token": 320,
+      "max_ctx": 131072,
+      "license": "Llama 3.3 Community",
+      "released": "2024-12",
+      "tags": [
+        "frontier-class",
+        "heavy"
+      ]
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "family": "Llama",
+      "vendor": "Meta",
+      "params_b": 405,
+      "active_b": 405,
+      "kv_kb_per_token": 504,
+      "max_ctx": 131072,
+      "license": "Llama 3.1 Community",
+      "released": "2024-07",
+      "tags": [
+        "extreme",
+        "datacenter"
+      ]
+    },
+    {
+      "id": "mistral-7b",
+      "name": "Mistral 7B v0.3",
+      "family": "Mistral",
+      "vendor": "Mistral AI",
+      "params_b": 7.25,
+      "active_b": 7.25,
+      "kv_kb_per_token": 128,
+      "max_ctx": 32768,
+      "license": "Apache 2.0",
+      "released": "2024-05",
+      "tags": [
+        "classic",
+        "workhorse"
+      ]
+    },
+    {
+      "id": "mistral-small-24b",
+      "name": "Mistral Small 3 24B",
+      "family": "Mistral",
+      "vendor": "Mistral AI",
+      "params_b": 23.6,
+      "active_b": 23.6,
+      "kv_kb_per_token": 160,
+      "max_ctx": 32768,
+      "license": "Apache 2.0",
+      "released": "2025-01",
+      "tags": [
+        "midrange",
+        "low-latency"
+      ]
+    },
+    {
+      "id": "mixtral-8x7b",
+      "name": "Mixtral 8x7B",
+      "family": "Mistral",
+      "vendor": "Mistral AI",
+      "params_b": 46.7,
+      "active_b": 12.9,
+      "kv_kb_per_token": 128,
+      "max_ctx": 32768,
+      "license": "Apache 2.0",
+      "released": "2023-12",
+      "tags": [
+        "moe"
+      ]
+    },
+    {
+      "id": "phi-4-14b",
+      "name": "Phi-4 14B",
+      "family": "Phi",
+      "vendor": "Microsoft",
+      "params_b": 14.7,
+      "active_b": 14.7,
+      "kv_kb_per_token": 200,
+      "max_ctx": 16384,
+      "license": "MIT",
+      "released": "2024-12",
+      "tags": [
+        "reasoning",
+        "midrange"
+      ]
+    },
+    {
+      "id": "qwen2-5-1-5b",
+      "name": "Qwen2.5 1.5B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 1.54,
+      "active_b": 1.54,
+      "kv_kb_per_token": 28,
+      "max_ctx": 32768,
+      "license": "Apache 2.0",
+      "released": "2024-09",
+      "tags": [
+        "tiny",
+        "on-device"
+      ]
+    },
+    {
+      "id": "qwen2-5-3b",
+      "name": "Qwen2.5 3B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 3.09,
+      "active_b": 3.09,
+      "kv_kb_per_token": 36,
+      "max_ctx": 32768,
+      "license": "Qwen Research",
+      "released": "2024-09",
+      "tags": [
+        "small"
+      ]
+    },
+    {
+      "id": "qwen2-5-7b",
+      "name": "Qwen2.5 7B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 7.62,
+      "active_b": 7.62,
+      "kv_kb_per_token": 56,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-09",
+      "tags": [
+        "workhorse",
+        "efficient-kv"
+      ]
+    },
+    {
+      "id": "qwen2-5-coder-7b",
+      "name": "Qwen2.5-Coder 7B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 7.62,
+      "active_b": 7.62,
+      "kv_kb_per_token": 56,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-11",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 8.2,
+      "active_b": 8.2,
+      "kv_kb_per_token": 144,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-04",
+      "tags": [
+        "reasoning",
+        "hybrid-thinking"
+      ]
+    },
+    {
+      "id": "qwen2-5-14b",
+      "name": "Qwen2.5 14B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 14.8,
+      "active_b": 14.8,
+      "kv_kb_per_token": 192,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-09",
+      "tags": [
+        "midrange"
+      ]
+    },
+    {
+      "id": "qwen2-5-coder-14b",
+      "name": "Qwen2.5-Coder 14B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 14.8,
+      "active_b": 14.8,
+      "kv_kb_per_token": 192,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-11",
+      "tags": [
+        "coding"
+      ]
+    },
+    {
+      "id": "qwen3-14b",
+      "name": "Qwen3 14B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 14.8,
+      "active_b": 14.8,
+      "kv_kb_per_token": 160,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-04",
+      "tags": [
+        "reasoning"
+      ]
+    },
+    {
+      "id": "qwen3-30b-a3b",
+      "name": "Qwen3 30B-A3B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 30.5,
+      "active_b": 3.3,
+      "kv_kb_per_token": 96,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-04",
+      "tags": [
+        "moe",
+        "fast-for-size"
+      ]
+    },
+    {
+      "id": "qwen2-5-32b",
+      "name": "Qwen2.5 32B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 32.8,
+      "active_b": 32.8,
+      "kv_kb_per_token": 256,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-09",
+      "tags": [
+        "large"
+      ]
+    },
+    {
+      "id": "qwen2-5-coder-32b",
+      "name": "Qwen2.5-Coder 32B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 32.8,
+      "active_b": 32.8,
+      "kv_kb_per_token": 256,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2024-11",
+      "tags": [
+        "coding",
+        "local-copilot"
+      ]
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 32.8,
+      "active_b": 32.8,
+      "kv_kb_per_token": 256,
+      "max_ctx": 131072,
+      "license": "Apache 2.0",
+      "released": "2025-04",
+      "tags": [
+        "reasoning",
+        "large"
+      ]
+    },
+    {
+      "id": "qwen2-5-72b",
+      "name": "Qwen2.5 72B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 72.7,
+      "active_b": 72.7,
+      "kv_kb_per_token": 320,
+      "max_ctx": 131072,
+      "license": "Qwen License",
+      "released": "2024-09",
+      "tags": [
+        "heavy"
+      ]
+    }
+  ]
+}

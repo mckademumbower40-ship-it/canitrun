@@ -1,0 +1,15 @@
+{
+  "name": "canitrun",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Which AI models actually run on your Mac. A static site generated from a deterministic sizing engine.",
+  "scripts": {
+    "build": "node build.js",
+    "check": "node scripts/checklinks.js",
+    "discover": "node scripts/discover.js",
+    "discover:write": "node scripts/discover.js --write",
+    "serve": "node build.js && node -e \"const h=require('http'),f=require('fs'),p=require('path');h.createServer((q,s)=>{let u=p.join('docs',decodeURIComponent(q.url.split('?')[0]));if(f.existsSync(u)&&f.statSync(u).isDirectory())u=p.join(u,'index.html');if(!f.existsSync(u)){s.writeHead(404);return s.end('404')}s.writeHead(200,{'content-type':u.endsWith('.xml')?'application/xml':u.endsWith('.txt')?'text/plain':'text/html'});s.end(f.readFileSync(u))}).listen(4321,()=>console.log('http://localhost:4321'))\"",
+    "all": "npm run discover:write && npm run build && npm run check"
+  },
+  "engines": { "node": ">=18" }
+}

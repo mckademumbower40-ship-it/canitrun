@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mckademumbower40-ship-it.github.io/canitrun/sitemap.xml

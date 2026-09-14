@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Can an M3 Ultra 96GB Mac run DeepSeek V4 Flash 0731? — No</title>
+<meta name="description" content="DeepSeek V4 Flash 0731 at Q4_K_M needs 183.7 GiB but an M3 Ultra 96GB Mac only has about 81.6 GiB available. Here is what fits instead.">
+<link rel="canonical" href="https://mckademumbower40-ship-it.github.io/canitrun/can/deepseek-v4-flash-0731-on-m3-ultra-96gb/">
+<meta property="og:title" content="Can an M3 Ultra 96GB Mac run DeepSeek V4 Flash 0731? — No">
+<meta property="og:description" content="DeepSeek V4 Flash 0731 at Q4_K_M needs 183.7 GiB but an M3 Ultra 96GB Mac only has about 81.6 GiB available. Here is what fits instead.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+<style>
+:root{--bg:#fbfaf8;--panel:#fff;--ink:#1a1a1c;--muted:#6b6b72;--line:#e6e4df;--accent:#2f5fe0;
+--good:#0f7a4d;--good-bg:#e7f5ee;--warn:#8a5a00;--warn-bg:#fdf3e0;--bad:#a32828;--bad-bg:#fbeceb;--radius:10px}
+@media (prefers-color-scheme:dark){:root{--bg:#131316;--panel:#1b1b20;--ink:#eceaf0;--muted:#9b99a4;--line:#2e2e36;--accent:#7fa2ff;
+--good:#5fd39b;--good-bg:#122e22;--warn:#e8b45c;--warn-bg:#2e2513;--bad:#f28b85;--bad-bg:#2f1917}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{border-bottom:1px solid var(--line);padding-block:14px;margin-bottom:28px;background:var(--panel)}
+header.top .wrap{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.brand{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+.brand:hover{text-decoration:none}
+nav.top-nav{display:flex;gap:16px;font-size:14px;margin-left:auto;flex-wrap:wrap}
+nav.top-nav a{color:var(--muted)}
+h1{font-size:30px;line-height:1.25;letter-spacing:-.02em;margin:0 0 8px}
+h2{font-size:20px;letter-spacing:-.01em;margin:38px 0 12px;padding-top:4px}
+h3{font-size:16px;margin:24px 0 8px}
+p{margin:0 0 14px}
+.sub{color:var(--muted);margin-bottom:26px}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:14px}
+.verdict{border-radius:var(--radius);padding:20px 22px;margin:22px 0;border:1px solid transparent}
+.verdict .big{font-size:26px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:4px}
+.verdict.good{background:var(--good-bg);border-color:color-mix(in srgb,var(--good) 30%,transparent);color:var(--good)}
+.verdict.warn{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 30%,transparent);color:var(--warn)}
+.verdict.bad{background:var(--bad-bg);border-color:color-mix(in srgb,var(--bad) 30%,transparent);color:var(--bad)}
+.verdict .why{color:var(--ink);opacity:.85;font-size:15px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+.stat .k{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.stat .v{font-size:19px;font-weight:650;font-variant-numeric:tabular-nums}
+.stat .n{font-size:12px;color:var(--muted);margin-top:2px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;text-align:right}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.pill.good{background:var(--good-bg);color:var(--good)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.bad{background:var(--bad-bg);color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:16px 0}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;color:var(--ink)}
+.card:hover{border-color:var(--accent);text-decoration:none}
+.card .t{font-weight:650;margin-bottom:3px}
+.card .d{font-size:13px;color:var(--muted)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);padding:14px 16px;margin:18px 0;font-size:14.5px}
+.note strong{display:block;margin-bottom:4px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;overflow-x:auto;font-size:13.5px;line-height:1.5}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+p code,li code,td code{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.aff{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:22px 0;background:var(--panel)}
+.aff h3{margin-top:0}
+.aff ul{margin:10px 0 0;padding-left:20px}
+.disclosure{font-size:12.5px;color:var(--muted);margin-top:12px;font-style:italic}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:24px 40px;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:underline}
+.faq dt{font-weight:650;margin-top:16px}
+.faq dd{margin:6px 0 0;color:var(--muted)}
+ul.plain{list-style:none;padding:0}
+ul.plain li{padding:7px 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:none}
+@media(max-width:560px){h1{font-size:24px}.wrap{padding:0 16px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can an M3 Ultra 96GB Mac run DeepSeek V4 Flash 0731?","acceptedAnswer":{"@type":"Answer","text":"No. At Q4_K_M it needs about 183.7 GiB, and an M3 Ultra 96GB Mac has roughly 81.6 GiB available for a model after macOS takes its share."}},{"@type":"Question","name":"How fast is DeepSeek V4 Flash 0731 on an  Mac?","acceptedAnswer":{"@type":"Answer","text":"Around 4 tokens per second. Token generation on Apple Silicon is limited by memory bandwidth, and this machine has 819 GB/s. "}},{"@type":"Question","name":"How much memory does DeepSeek V4 Flash 0731 need?","acceptedAnswer":{"@type":"Answer","text":"173.5 GiB for the weights at Q4_K_M, plus 0.7 GiB for an 8K-token KV cache and about 9.5 GiB of runtime overhead — 183.7 GiB in total."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../../">Can It Run?</a>
+  <nav class="top-nav">
+    <a href="../../models/">Models</a>
+    <a href="../../macs/">Macs</a>
+    <a href="../../guides/">Guides</a>
+    <a href="../../method/">Method</a>
+  </nav>
+</div></header>
+<main class="wrap">
+
+<div class="crumbs"><a href="../../">Home</a> › <a href="../../models/deepseek-v4-flash-0731/">DeepSeek V4 Flash 0731</a> › M3 Ultra 96GB</div>
+<h1>Can an M3 Ultra 96GB Mac run DeepSeek V4 Flash 0731?</h1>
+<p class="sub">M3 Ultra · 96 GB unified memory · 819 GB/s · Mac Studio (M3 Ultra)</p>
+<div class="verdict bad">
+  <span class="big">No — not at Q4_K_M.</span>
+  <p class="why">DeepSeek V4 Flash 0731 needs about <strong>183.7 GiB</strong> but an M3 Ultra 96GB Mac has only ~81.6 GiB available for a model — you are <strong>102.1 GiB</strong> short. macOS will swap to SSD and generation will crawl.</p>
+</div>
+<div class="stats"><div class="stat"><div class="k">Weights</div><div class="v">173.5 GiB</div><div class="n">304.18B params @ Q4_K_M</div></div><div class="stat"><div class="k">KV cache</div><div class="v">0.7 GiB</div><div class="n">8K context, FP16</div></div><div class="stat"><div class="k">Overhead</div><div class="v">9.5 GiB</div><div class="n">runtime + activations</div></div><div class="stat"><div class="k">Total needed</div><div class="v">183.7 GiB</div><div class="n">of ~81.6 GiB usable</div></div><div class="stat"><div class="k">Est. speed</div><div class="v">4 tok/s</div><div class="n">819 GB/s bandwidth</div></div><div class="stat"><div class="k">Max context</div><div class="v">n/a</div><div class="n">at Q4_K_M</div></div></div>
+
+<h2>Where the memory goes</h2>
+<p>Three things occupy memory when a model is loaded: the weights themselves, the KV cache that holds the conversation, and the runtime's own working buffers. Only the first is fixed — the KV cache grows with every token in your context.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Quantisation</th><th class="num">Weights</th><th class="num">Total</th><th class="num">Tok/s</th><th>Fits?</th></tr></thead>
+<tbody><tr><td><strong>FP16</strong></td><td class="num">566.6 GiB</td><td class="num">596.4 GiB</td><td class="num">1</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q8_0</strong></td><td class="num">301.0 GiB</td><td class="num">317.5 GiB</td><td class="num">2</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q6_K</strong></td><td class="num">233.7 GiB</td><td class="num">246.9 GiB</td><td class="num">3</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q5_K_M</strong></td><td class="num">201.8 GiB</td><td class="num">213.4 GiB</td><td class="num">3</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q4_K_M</strong></td><td class="num">173.5 GiB</td><td class="num">183.7 GiB</td><td class="num">4</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q3_K_M</strong></td><td class="num">138.1 GiB</td><td class="num">146.5 GiB</td><td class="num">4</td><td><span class="pill bad">No</span></td></tr><tr><td><strong>Q2_K</strong></td><td class="num">106.2 GiB</td><td class="num">113.0 GiB</td><td class="num">6</td><td><span class="pill bad">No</span></td></tr></tbody>
+</table></div>
+<p>The default. Best quality-per-gigabyte for most people.</p>
+
+<h2>How long a context fits</h2>
+<p>The KV cache is often what breaks a setup that looked fine at load time. Quantising it to 8-bit roughly halves its footprint with little measurable quality cost.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Context</th><th class="num">KV cache</th><th class="num">Total</th><th>FP16 KV</th><th>Q8 KV</th></tr></thead>
+<tbody><tr><td><strong>2K</strong></td><td class="num">0.2 GiB</td><td class="num">182.9 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr><tr><td><strong>4K</strong></td><td class="num">0.3 GiB</td><td class="num">183.2 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr><tr><td><strong>8K</strong></td><td class="num">0.7 GiB</td><td class="num">183.7 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr><tr><td><strong>16K</strong></td><td class="num">1.3 GiB</td><td class="num">184.6 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr><tr><td><strong>32K</strong></td><td class="num">2.7 GiB</td><td class="num">186.6 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr><tr><td><strong>128K</strong></td><td class="num">10.8 GiB</td><td class="num">198.2 GiB</td><td><span class="pill bad">No</span></td><td><span class="pill bad">No</span></td></tr></tbody>
+</table></div>
+
+<h2>What to run instead on an M3 Ultra 96GB Mac</h2>
+<p>These are the largest models that fit comfortably on this machine at Q4_K_M with an 8K context.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Model</th><th class="num">Size</th><th class="num">Total</th><th class="num">Tok/s</th><th></th></tr></thead>
+<tbody><tr><td><a href="../qwen2-5-72b-on-m3-ultra-96gb/">Qwen2.5 72B</a></td><td class="num">72.7B</td><td class="num">46.8 GiB</td><td class="num">15</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../r1-distill-llama-70b-on-m3-ultra-96gb/">DeepSeek-R1-Distill-Llama-70B</a></td><td class="num">70.6B</td><td class="num">45.6 GiB</td><td class="num">15</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../llama-3-3-70b-on-m3-ultra-96gb/">Llama 3.3 70B</a></td><td class="num">70.6B</td><td class="num">45.6 GiB</td><td class="num">15</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../mixtral-8x7b-on-m3-ultra-96gb/">Mixtral 8x7B</a></td><td class="num">46.7B</td><td class="num">29.8 GiB</td><td class="num">52</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../r1-distill-qwen-32b-on-m3-ultra-96gb/">DeepSeek-R1-Distill-Qwen-32B</a></td><td class="num">32.8B</td><td class="num">22.4 GiB</td><td class="num">33</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../qwen2-5-32b-on-m3-ultra-96gb/">Qwen2.5 32B</a></td><td class="num">32.8B</td><td class="num">22.4 GiB</td><td class="num">33</td><td><span class="pill good">Yes, comfortably</span></td></tr></tbody>
+</table></div>
+
+<aside class="aff">
+  <h3>Getting more memory</h3>
+  <p>Apple Silicon memory is soldered - you cannot add RAM later. If you are buying, the memory tier you pick is the single decision that determines which models you will ever run.</p>
+  <ul><li><a href="https://www.amazon.com/s?k=Apple%20Mac%20mini%20M4" rel="nofollow noopener" target="_blank">Mac mini (M4) on Amazon</a></li><li><a href="https://www.amazon.com/s?k=Apple%20MacBook%20Air%20M4" rel="nofollow noopener" target="_blank">MacBook Air (M4) on Amazon</a></li><li><a href="https://www.amazon.com/s?k=Apple%20Mac%20Studio" rel="nofollow noopener" target="_blank">Mac Studio on Amazon</a></li></ul>
+  
+</aside>
+<h2>Macs that run DeepSeek V4 Flash 0731 comfortably</h2>
+<p>The smallest configuration that handles it is the <strong>M3 Ultra 256GB</strong> (Mac Studio (M3 Ultra)).</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Mac</th><th class="num">Memory</th><th class="num">Bandwidth</th><th class="num">Tok/s</th></tr></thead>
+<tbody><tr><td><a href="../deepseek-v4-flash-0731-on-m3-ultra-256gb/">M3 Ultra 256GB</a></td><td class="num">256 GB</td><td class="num">819 GB/s</td><td class="num">4</td></tr><tr><td><a href="../deepseek-v4-flash-0731-on-m3-ultra-512gb/">M3 Ultra 512GB</a></td><td class="num">512 GB</td><td class="num">819 GB/s</td><td class="num">4</td></tr></tbody>
+</table></div>
+<h2>Common questions</h2><dl class="faq"><dt>Can an M3 Ultra 96GB Mac run DeepSeek V4 Flash 0731?</dt><dd>No. At Q4_K_M it needs about 183.7 GiB, and an M3 Ultra 96GB Mac has roughly 81.6 GiB available for a model after macOS takes its share.</dd><dt>How fast is DeepSeek V4 Flash 0731 on an  Mac?</dt><dd>Around 4 tokens per second. Token generation on Apple Silicon is limited by memory bandwidth, and this machine has 819 GB/s. </dd><dt>How much memory does DeepSeek V4 Flash 0731 need?</dt><dd>173.5 GiB for the weights at Q4_K_M, plus 0.7 GiB for an 8K-token KV cache and about 9.5 GiB of runtime overhead — 183.7 GiB in total.</dd></dl>
+
+</main>
+<footer><div class="wrap">
+  <p>Can It Run? — Which AI models actually run on your Mac. Estimates are computed from published model architectures and Apple's memory bandwidth specs; they are not benchmarks. <a href="../../method/">How the numbers are calculated</a>.</p>
+  <p>Not affiliated with Apple, Meta, Google, Alibaba, Mistral AI, DeepSeek, Microsoft or OpenAI. Apple, Mac, MacBook and Apple Silicon are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

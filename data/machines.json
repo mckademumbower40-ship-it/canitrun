@@ -1,0 +1,32 @@
+{
+  "_note": "Apple Silicon configurations. bandwidth_gbps is peak unified memory bandwidth and is the main driver of token generation speed. products lists Macs sold in this exact configuration.",
+  "machines": [
+    { "id": "m1-8gb",        "chip": "M1",        "ram_gb": 8,   "bandwidth_gbps": 68,  "gpu_cores": 8,  "year": 2020, "products": ["MacBook Air (M1)", "MacBook Pro 13\" (M1)", "Mac mini (M1)"] },
+    { "id": "m1-16gb",       "chip": "M1",        "ram_gb": 16,  "bandwidth_gbps": 68,  "gpu_cores": 8,  "year": 2020, "products": ["MacBook Air (M1)", "Mac mini (M1)", "iMac 24\" (M1)"] },
+    { "id": "m1-pro-16gb",   "chip": "M1 Pro",    "ram_gb": 16,  "bandwidth_gbps": 200, "gpu_cores": 16, "year": 2021, "products": ["MacBook Pro 14\" (M1 Pro)", "MacBook Pro 16\" (M1 Pro)"] },
+    { "id": "m1-max-32gb",   "chip": "M1 Max",    "ram_gb": 32,  "bandwidth_gbps": 400, "gpu_cores": 24, "year": 2021, "products": ["MacBook Pro 14\" (M1 Max)", "MacBook Pro 16\" (M1 Max)", "Mac Studio (M1 Max)"] },
+    { "id": "m1-max-64gb",   "chip": "M1 Max",    "ram_gb": 64,  "bandwidth_gbps": 400, "gpu_cores": 32, "year": 2021, "products": ["MacBook Pro 16\" (M1 Max)", "Mac Studio (M1 Max)"] },
+    { "id": "m2-16gb",       "chip": "M2",        "ram_gb": 16,  "bandwidth_gbps": 100, "gpu_cores": 10, "year": 2022, "products": ["MacBook Air 13\" (M2)", "MacBook Air 15\" (M2)", "Mac mini (M2)"] },
+    { "id": "m2-24gb",       "chip": "M2",        "ram_gb": 24,  "bandwidth_gbps": 100, "gpu_cores": 10, "year": 2022, "products": ["MacBook Air 15\" (M2)", "Mac mini (M2)"] },
+    { "id": "m2-max-32gb",   "chip": "M2 Max",    "ram_gb": 32,  "bandwidth_gbps": 400, "gpu_cores": 30, "year": 2023, "products": ["MacBook Pro 14\" (M2 Max)", "Mac Studio (M2 Max)"] },
+    { "id": "m2-max-96gb",   "chip": "M2 Max",    "ram_gb": 96,  "bandwidth_gbps": 400, "gpu_cores": 38, "year": 2023, "products": ["MacBook Pro 16\" (M2 Max)", "Mac Studio (M2 Max)"] },
+    { "id": "m2-ultra-64gb", "chip": "M2 Ultra",  "ram_gb": 64,  "bandwidth_gbps": 800, "gpu_cores": 60, "year": 2023, "products": ["Mac Studio (M2 Ultra)", "Mac Pro (M2 Ultra)"] },
+    { "id": "m2-ultra-192gb","chip": "M2 Ultra",  "ram_gb": 192, "bandwidth_gbps": 800, "gpu_cores": 76, "year": 2023, "products": ["Mac Studio (M2 Ultra)", "Mac Pro (M2 Ultra)"] },
+    { "id": "m3-pro-18gb",   "chip": "M3 Pro",    "ram_gb": 18,  "bandwidth_gbps": 150, "gpu_cores": 14, "year": 2023, "products": ["MacBook Pro 14\" (M3 Pro)", "MacBook Pro 16\" (M3 Pro)"] },
+    { "id": "m3-max-36gb",   "chip": "M3 Max",    "ram_gb": 36,  "bandwidth_gbps": 300, "gpu_cores": 30, "year": 2023, "products": ["MacBook Pro 14\" (M3 Max)", "MacBook Pro 16\" (M3 Max)"] },
+    { "id": "m3-max-128gb",  "chip": "M3 Max",    "ram_gb": 128, "bandwidth_gbps": 400, "gpu_cores": 40, "year": 2023, "products": ["MacBook Pro 16\" (M3 Max)"] },
+    { "id": "m3-ultra-96gb", "chip": "M3 Ultra",  "ram_gb": 96,  "bandwidth_gbps": 819, "gpu_cores": 60, "year": 2025, "products": ["Mac Studio (M3 Ultra)"] },
+    { "id": "m3-ultra-256gb","chip": "M3 Ultra",  "ram_gb": 256, "bandwidth_gbps": 819, "gpu_cores": 80, "year": 2025, "products": ["Mac Studio (M3 Ultra)"] },
+    { "id": "m3-ultra-512gb","chip": "M3 Ultra",  "ram_gb": 512, "bandwidth_gbps": 819, "gpu_cores": 80, "year": 2025, "products": ["Mac Studio (M3 Ultra)"] },
+    { "id": "m4-16gb",       "chip": "M4",        "ram_gb": 16,  "bandwidth_gbps": 120, "gpu_cores": 10, "year": 2024, "products": ["MacBook Air 13\" (M4)", "MacBook Air 15\" (M4)", "Mac mini (M4)", "iMac 24\" (M4)"] },
+    { "id": "m4-24gb",       "chip": "M4",        "ram_gb": 24,  "bandwidth_gbps": 120, "gpu_cores": 10, "year": 2024, "products": ["MacBook Air 15\" (M4)", "Mac mini (M4)", "iMac 24\" (M4)"] },
+    { "id": "m4-32gb",       "chip": "M4",        "ram_gb": 32,  "bandwidth_gbps": 120, "gpu_cores": 10, "year": 2024, "products": ["MacBook Air 15\" (M4)", "Mac mini (M4)", "iMac 24\" (M4)"] },
+    { "id": "m4-pro-24gb",   "chip": "M4 Pro",    "ram_gb": 24,  "bandwidth_gbps": 273, "gpu_cores": 16, "year": 2024, "products": ["Mac mini (M4 Pro)", "MacBook Pro 14\" (M4 Pro)"] },
+    { "id": "m4-pro-48gb",   "chip": "M4 Pro",    "ram_gb": 48,  "bandwidth_gbps": 273, "gpu_cores": 20, "year": 2024, "products": ["Mac mini (M4 Pro)", "MacBook Pro 14\" (M4 Pro)", "MacBook Pro 16\" (M4 Pro)"] },
+    { "id": "m4-pro-64gb",   "chip": "M4 Pro",    "ram_gb": 64,  "bandwidth_gbps": 273, "gpu_cores": 20, "year": 2024, "products": ["Mac mini (M4 Pro)", "MacBook Pro 16\" (M4 Pro)"] },
+    { "id": "m4-max-36gb",   "chip": "M4 Max",    "ram_gb": 36,  "bandwidth_gbps": 410, "gpu_cores": 32, "year": 2024, "products": ["MacBook Pro 14\" (M4 Max)"] },
+    { "id": "m4-max-48gb",   "chip": "M4 Max",    "ram_gb": 48,  "bandwidth_gbps": 546, "gpu_cores": 40, "year": 2024, "products": ["MacBook Pro 14\" (M4 Max)", "MacBook Pro 16\" (M4 Max)", "Mac Studio (M4 Max)"] },
+    { "id": "m4-max-64gb",   "chip": "M4 Max",    "ram_gb": 64,  "bandwidth_gbps": 546, "gpu_cores": 40, "year": 2024, "products": ["MacBook Pro 16\" (M4 Max)", "Mac Studio (M4 Max)"] },
+    { "id": "m4-max-128gb",  "chip": "M4 Max",    "ram_gb": 128, "bandwidth_gbps": 546, "gpu_cores": 40, "year": 2024, "products": ["MacBook Pro 16\" (M4 Max)", "Mac Studio (M4 Max)"] }
+  ]
+}

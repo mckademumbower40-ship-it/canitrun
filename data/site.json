@@ -1,0 +1,10 @@
+{
+  "name": "Can It Run?",
+  "tagline": "Which AI models actually run on your Mac.",
+  "description": "Memory and speed estimates for running local LLMs on Apple Silicon. Every number is computed, not guessed.",
+  "baseUrl": "https://mckademumbower40-ship-it.github.io/canitrun",
+  "author": "Mckade Mumbower",
+  "repo": "canitrun",
+  "locale": "en",
+  "twitter": ""
+}

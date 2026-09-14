@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gemma 2 9B on Apple Silicon — memory needed and speed by Mac</title>
+<meta name="description" content="Gemma 2 9B needs 5.3 GiB at Q4_K_M. The smallest Mac that runs it is an M1 16GB. Full table of every Apple Silicon config.">
+<link rel="canonical" href="https://mckademumbower40-ship-it.github.io/canitrun/models/gemma-2-9b/">
+<meta property="og:title" content="Gemma 2 9B on Apple Silicon — memory needed and speed by Mac">
+<meta property="og:description" content="Gemma 2 9B needs 5.3 GiB at Q4_K_M. The smallest Mac that runs it is an M1 16GB. Full table of every Apple Silicon config.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+<style>
+:root{--bg:#fbfaf8;--panel:#fff;--ink:#1a1a1c;--muted:#6b6b72;--line:#e6e4df;--accent:#2f5fe0;
+--good:#0f7a4d;--good-bg:#e7f5ee;--warn:#8a5a00;--warn-bg:#fdf3e0;--bad:#a32828;--bad-bg:#fbeceb;--radius:10px}
+@media (prefers-color-scheme:dark){:root{--bg:#131316;--panel:#1b1b20;--ink:#eceaf0;--muted:#9b99a4;--line:#2e2e36;--accent:#7fa2ff;
+--good:#5fd39b;--good-bg:#122e22;--warn:#e8b45c;--warn-bg:#2e2513;--bad:#f28b85;--bad-bg:#2f1917}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{border-bottom:1px solid var(--line);padding-block:14px;margin-bottom:28px;background:var(--panel)}
+header.top .wrap{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.brand{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+.brand:hover{text-decoration:none}
+nav.top-nav{display:flex;gap:16px;font-size:14px;margin-left:auto;flex-wrap:wrap}
+nav.top-nav a{color:var(--muted)}
+h1{font-size:30px;line-height:1.25;letter-spacing:-.02em;margin:0 0 8px}
+h2{font-size:20px;letter-spacing:-.01em;margin:38px 0 12px;padding-top:4px}
+h3{font-size:16px;margin:24px 0 8px}
+p{margin:0 0 14px}
+.sub{color:var(--muted);margin-bottom:26px}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:14px}
+.verdict{border-radius:var(--radius);padding:20px 22px;margin:22px 0;border:1px solid transparent}
+.verdict .big{font-size:26px;font-weight:700;letter-spacing:-.02em;display:block;margin-bottom:4px}
+.verdict.good{background:var(--good-bg);border-color:color-mix(in srgb,var(--good) 30%,transparent);color:var(--good)}
+.verdict.warn{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 30%,transparent);color:var(--warn)}
+.verdict.bad{background:var(--bad-bg);border-color:color-mix(in srgb,var(--bad) 30%,transparent);color:var(--bad)}
+.verdict .why{color:var(--ink);opacity:.85;font-size:15px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+.stat .k{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.stat .v{font-size:19px;font-weight:650;font-variant-numeric:tabular-nums}
+.stat .n{font-size:12px;color:var(--muted);margin-top:2px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;text-align:right}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.pill.good{background:var(--good-bg);color:var(--good)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.bad{background:var(--bad-bg);color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:16px 0}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;color:var(--ink)}
+.card:hover{border-color:var(--accent);text-decoration:none}
+.card .t{font-weight:650;margin-bottom:3px}
+.card .d{font-size:13px;color:var(--muted)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);padding:14px 16px;margin:18px 0;font-size:14.5px}
+.note strong{display:block;margin-bottom:4px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;overflow-x:auto;font-size:13.5px;line-height:1.5}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+p code,li code,td code{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.aff{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:22px 0;background:var(--panel)}
+.aff h3{margin-top:0}
+.aff ul{margin:10px 0 0;padding-left:20px}
+.disclosure{font-size:12.5px;color:var(--muted);margin-top:12px;font-style:italic}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:24px 40px;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:underline}
+.faq dt{font-weight:650;margin-top:16px}
+.faq dd{margin:6px 0 0;color:var(--muted)}
+ul.plain{list-style:none;padding:0}
+ul.plain li{padding:7px 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:none}
+@media(max-width:560px){h1{font-size:24px}.wrap{padding:0 16px}}
+</style>
+
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../../">Can It Run?</a>
+  <nav class="top-nav">
+    <a href="../../models/">Models</a>
+    <a href="../../macs/">Macs</a>
+    <a href="../../guides/">Guides</a>
+    <a href="../../method/">Method</a>
+  </nav>
+</div></header>
+<main class="wrap">
+
+<div class="crumbs"><a href="../../">Home</a> › <a href="../">Models</a> › Gemma 2 9B</div>
+<h1>Gemma 2 9B on a Mac</h1>
+<p class="sub">Google · 9.24B parameters · Gemma Terms · released 2024-07</p>
+
+<div class="stats"><div class="stat"><div class="k">Weights @ Q4_K_M</div><div class="v">5.3 GiB</div><div class="n">the usual download size</div></div><div class="stat"><div class="k">KV cache</div><div class="v">336 KB</div><div class="n">per token, FP16</div></div><div class="stat"><div class="k">Max context</div><div class="v">8K</div><div class="n">tokens</div></div><div class="stat"><div class="k">Smallest Mac</div><div class="v">16 GB</div><div class="n">M1</div></div></div>
+
+<div class="note"><strong>Short answer</strong>A <strong>M1 16GB</strong> is the smallest Apple Silicon machine that loads Gemma 2 9B at Q4_K_M with an 8K context, at roughly 10 tokens/sec. MacBook Air (M1) is the cheapest way to get that configuration.</div>
+
+<h2>Every Mac, ranked</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Mac</th><th class="num">Memory</th><th class="num">Needs</th><th class="num">Tok/s</th><th>Verdict</th></tr></thead>
+<tbody><tr><td><a href="../../can/gemma-2-9b-on-m1-8gb/">M1 8GB</a></td><td class="num">8 GB</td><td class="num">9.0 GiB</td><td class="num">10</td><td><span class="pill bad">No</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m1-16gb/">M1 16GB</a></td><td class="num">16 GB</td><td class="num">9.0 GiB</td><td class="num">10</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-16gb/">M2 16GB</a></td><td class="num">16 GB</td><td class="num">9.0 GiB</td><td class="num">14</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-16gb/">M4 16GB</a></td><td class="num">16 GB</td><td class="num">9.0 GiB</td><td class="num">17</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m1-pro-16gb/">M1 Pro 16GB</a></td><td class="num">16 GB</td><td class="num">9.0 GiB</td><td class="num">28</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-pro-18gb/">M3 Pro 18GB</a></td><td class="num">18 GB</td><td class="num">9.0 GiB</td><td class="num">21</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-24gb/">M2 24GB</a></td><td class="num">24 GB</td><td class="num">9.0 GiB</td><td class="num">14</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-24gb/">M4 24GB</a></td><td class="num">24 GB</td><td class="num">9.0 GiB</td><td class="num">17</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-pro-24gb/">M4 Pro 24GB</a></td><td class="num">24 GB</td><td class="num">9.0 GiB</td><td class="num">39</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-32gb/">M4 32GB</a></td><td class="num">32 GB</td><td class="num">9.0 GiB</td><td class="num">17</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m1-max-32gb/">M1 Max 32GB</a></td><td class="num">32 GB</td><td class="num">9.0 GiB</td><td class="num">57</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-max-32gb/">M2 Max 32GB</a></td><td class="num">32 GB</td><td class="num">9.0 GiB</td><td class="num">57</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-max-36gb/">M3 Max 36GB</a></td><td class="num">36 GB</td><td class="num">9.0 GiB</td><td class="num">42</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-max-36gb/">M4 Max 36GB</a></td><td class="num">36 GB</td><td class="num">9.0 GiB</td><td class="num">58</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-pro-48gb/">M4 Pro 48GB</a></td><td class="num">48 GB</td><td class="num">9.0 GiB</td><td class="num">39</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-max-48gb/">M4 Max 48GB</a></td><td class="num">48 GB</td><td class="num">9.0 GiB</td><td class="num">77</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-pro-64gb/">M4 Pro 64GB</a></td><td class="num">64 GB</td><td class="num">9.0 GiB</td><td class="num">39</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m1-max-64gb/">M1 Max 64GB</a></td><td class="num">64 GB</td><td class="num">9.0 GiB</td><td class="num">57</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-max-64gb/">M4 Max 64GB</a></td><td class="num">64 GB</td><td class="num">9.0 GiB</td><td class="num">77</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-ultra-64gb/">M2 Ultra 64GB</a></td><td class="num">64 GB</td><td class="num">9.0 GiB</td><td class="num">113</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-max-96gb/">M2 Max 96GB</a></td><td class="num">96 GB</td><td class="num">9.0 GiB</td><td class="num">57</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-ultra-96gb/">M3 Ultra 96GB</a></td><td class="num">96 GB</td><td class="num">9.0 GiB</td><td class="num">116</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-max-128gb/">M3 Max 128GB</a></td><td class="num">128 GB</td><td class="num">9.0 GiB</td><td class="num">57</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m4-max-128gb/">M4 Max 128GB</a></td><td class="num">128 GB</td><td class="num">9.0 GiB</td><td class="num">77</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m2-ultra-192gb/">M2 Ultra 192GB</a></td><td class="num">192 GB</td><td class="num">9.0 GiB</td><td class="num">113</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-ultra-256gb/">M3 Ultra 256GB</a></td><td class="num">256 GB</td><td class="num">9.0 GiB</td><td class="num">116</td><td><span class="pill good">Yes, comfortably</span></td></tr><tr><td><a href="../../can/gemma-2-9b-on-m3-ultra-512gb/">M3 Ultra 512GB</a></td><td class="num">512 GB</td><td class="num">9.0 GiB</td><td class="num">116</td><td><span class="pill good">Yes, comfortably</span></td></tr></tbody>
+</table></div>
+
+<h2>Download size by quantisation</h2>
+<p>Weight memory scales linearly with bits per parameter. Everything below assumes an 8K context on top.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Quantisation</th><th class="num">Weights</th><th class="num">Total @ 8K</th><th>Notes</th></tr></thead>
+<tbody><tr><td><strong>FP16</strong></td><td class="num">17.2 GiB</td><td class="num">21.5 GiB</td><td>Full precision. Reference quality, twice the memory of Q8.</td></tr><tr><td><strong>Q8_0</strong></td><td class="num">9.1 GiB</td><td class="num">13.0 GiB</td><td>Indistinguishable from FP16 in practice, at half the size.</td></tr><tr><td><strong>Q6_K</strong></td><td class="num">7.1 GiB</td><td class="num">10.9 GiB</td><td>Near-lossless. A good stop when you have memory to spare.</td></tr><tr><td><strong>Q5_K_M</strong></td><td class="num">6.1 GiB</td><td class="num">9.9 GiB</td><td>Slightly better than Q4_K_M, noticeably bigger.</td></tr><tr><td><strong>Q4_K_M</strong></td><td class="num">5.3 GiB</td><td class="num">9.0 GiB</td><td>The default. Best quality-per-gigabyte for most people.</td></tr><tr><td><strong>Q3_K_M</strong></td><td class="num">4.2 GiB</td><td class="num">7.8 GiB</td><td>Visible quality loss. Use to squeeze one size class up.</td></tr><tr><td><strong>Q2_K</strong></td><td class="num">3.2 GiB</td><td class="num">6.8 GiB</td><td>Last resort. Often worse than a smaller model at Q4.</td></tr></tbody>
+</table></div>
+
+
+
+
+<aside class="aff">
+  <h3>Somewhere to keep the weights</h3>
+  <p>Model files are large and Apple's internal storage is expensive. A fast external SSD over Thunderbolt loads weights quickly enough that you will not notice the difference.</p>
+  <ul><li><a href="https://www.amazon.com/s?k=Thunderbolt%204%20NVMe%20SSD%20enclosure%202TB" rel="nofollow noopener" target="_blank">Thunderbolt / USB4 external SSD</a></li><li><a href="https://www.amazon.com/s?k=Samsung%20T9%20portable%20SSD%202TB" rel="nofollow noopener" target="_blank">Samsung T9 portable SSD</a></li></ul>
+  
+</aside>
+
+</main>
+<footer><div class="wrap">
+  <p>Can It Run? — Which AI models actually run on your Mac. Estimates are computed from published model architectures and Apple's memory bandwidth specs; they are not benchmarks. <a href="../../method/">How the numbers are calculated</a>.</p>
+  <p>Not affiliated with Apple, Meta, Google, Alibaba, Mistral AI, DeepSeek, Microsoft or OpenAI. Apple, Mac, MacBook and Apple Silicon are trademarks of Apple Inc.</p>
+</div></footer>
+</body>
+</html>

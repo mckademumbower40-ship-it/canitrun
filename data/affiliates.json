@@ -1,0 +1,42 @@
+{
+  "_note": "Set `tag` to your Amazon Associates tracking ID once approved, then every link on all 900+ pages updates on the next build. Until `tag` is set, the site renders plain non-affiliate links and hides the disclosure, so you are never claiming a relationship you do not have.",
+  "amazon": {
+    "tag": "",
+    "domain": "www.amazon.com"
+  },
+  "disclosure": "Some links on this page are affiliate links. If you buy through them this site earns a commission at no extra cost to you. It does not change the numbers above - those come from arithmetic, not sponsorship.",
+  "recommendations": {
+    "upgrade_ram": {
+      "heading": "Getting more memory",
+      "body": "Apple Silicon memory is soldered - you cannot add RAM later. If you are buying, the memory tier you pick is the single decision that determines which models you will ever run.",
+      "products": [
+        { "label": "Mac mini (M4) on Amazon",        "search": "Apple Mac mini M4" },
+        { "label": "MacBook Air (M4) on Amazon",     "search": "Apple MacBook Air M4" },
+        { "label": "Mac Studio on Amazon",           "search": "Apple Mac Studio" }
+      ]
+    },
+    "storage": {
+      "heading": "Somewhere to keep the weights",
+      "body": "Model files are large and Apple's internal storage is expensive. A fast external SSD over Thunderbolt loads weights quickly enough that you will not notice the difference.",
+      "products": [
+        { "label": "Thunderbolt / USB4 external SSD", "search": "Thunderbolt 4 NVMe SSD enclosure 2TB" },
+        { "label": "Samsung T9 portable SSD",         "search": "Samsung T9 portable SSD 2TB" }
+      ]
+    },
+    "voice": {
+      "heading": "For voice assistants",
+      "body": "If you are running a local speech pipeline, a decent USB microphone changes transcription accuracy far more than a bigger Whisper model does.",
+      "products": [
+        { "label": "USB condenser microphone", "search": "USB condenser microphone podcasting" },
+        { "label": "Audio interface + XLR mic", "search": "USB audio interface XLR microphone bundle" }
+      ]
+    },
+    "cooling": {
+      "heading": "Sustained load",
+      "body": "A laptop under continuous inference will throttle. A cooling stand costs little and keeps long generation runs at full clocks.",
+      "products": [
+        { "label": "Laptop cooling stand", "search": "laptop cooling stand aluminum" }
+      ]
+    }
+  }
+}

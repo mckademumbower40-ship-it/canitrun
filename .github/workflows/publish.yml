@@ -1,0 +1,50 @@
+name: publish
+
+on:
+  schedule:
+    - cron: '17 6 * * *'     # daily, 06:17 UTC
+  push:
+    branches: [main]
+    paths-ignore: ['docs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Pull in any newly trending open-weight models. Parameter counts and KV
+      # cache sizes are read from each model's published config, so this never
+      # invents data. On a network hiccup we simply build with what we have.
+      - name: Discover new models
+        run: node scripts/discover.js --write || echo "discovery skipped"
+
+      - name: Build site
+        run: node build.js
+
+      - name: Verify every internal link
+        run: node scripts/checklinks.js
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data docs
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "rebuild: $(find docs -name '*.html' | wc -l | tr -d ' ') pages"
+            git push
+          fi
