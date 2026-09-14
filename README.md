@@ -24,6 +24,23 @@ Spot-checked against real-world reports:
 | DeepSeek R1 active parameters (derived) | 37.44B | 37B published |
 | DeepSeek R1 MLA KV cache (derived) | 69 KB/token | ~70 KB/token |
 
+## Setup
+
+Everything that can be automated already is. The site is live, and all 1,137 URLs
+have been submitted to IndexNow (Bing, Yandex, Seznam, Naver), which needs no
+account — ownership is proved by the key file in `static/`.
+
+What's left needs your logins:
+
+```sh
+./scripts/setup.sh
+```
+
+A five-stage wizard covering Amazon Associates, Google Search Console, Bing
+Webmaster Tools, and an optional custom domain. It opens each page, says exactly
+what to click, captures what you copy back, and publishes the changes for you.
+Safe to quit and re-run — it remembers what you already entered.
+
 ## Commands
 
 ```sh
@@ -48,9 +65,15 @@ lib/pages.js          model × machine pages
 lib/hubs.js           per-model and per-Mac hubs
 lib/guides.js         memory-tier guides, method page, home
 
+static/               copied verbatim into docs/ (verification files live here,
+                      because build.js wipes docs/ on every run)
+
 build.js              writes docs/
 scripts/discover.js   Hugging Face crawler
 scripts/checklinks.js internal link checker
+scripts/indexnow.js   IndexNow submission (no account needed)
+scripts/setup.sh      guided setup for the steps only a human can do
+scripts/set-affiliate-tag.js  one-command monetisation switch
 ```
 
 ## Monetisation
