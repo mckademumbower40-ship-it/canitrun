@@ -55,12 +55,26 @@ function build() {
 
   write('robots.txt', `User-agent: *\nAllow: /\n${site.baseUrl ? `Sitemap: ${site.baseUrl}/sitemap.xml\n` : ''}`);
   write('.nojekyll', '');
+
+  /* Anything in static/ is copied verbatim. Search-engine verification files
+     live here so that wiping docs/ on each build cannot destroy them. */
+  const STATIC = path.join(ROOT, 'static');
+  let copied = 0;
+  if (fs.existsSync(STATIC)) {
+    for (const entry of fs.readdirSync(STATIC, { withFileTypes: true, recursive: true })) {
+      if (entry.isDirectory()) continue;
+      const rel = path.relative(STATIC, path.join(entry.parentPath || entry.path, entry.name));
+      fs.mkdirSync(path.dirname(path.join(OUT, rel)), { recursive: true });
+      fs.copyFileSync(path.join(STATIC, rel), path.join(OUT, rel));
+      copied++;
+    }
+  }
   if (site.baseUrl && site.baseUrl.includes('://') && !site.baseUrl.includes('github.io')) {
     write('CNAME', site.baseUrl.replace(/^https?:\/\//, '').replace(/\/$/, '') + '\n');
   }
 
   const bytes = pages.reduce((n, p) => n + Buffer.byteLength(p.html), 0);
-  console.log(`built ${pages.length} pages (${(bytes / 1048576).toFixed(1)} MB) in ${Date.now() - t0}ms -> docs/`);
+  console.log(`built ${pages.length} pages (${(bytes / 1048576).toFixed(1)} MB)${copied ? `, copied ${copied} static file(s)` : ''} in ${Date.now() - t0}ms -> docs/`);
   return pages.length;
 }
 

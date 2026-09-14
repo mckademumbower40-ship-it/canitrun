@@ -38,13 +38,22 @@ jobs:
         run: node scripts/checklinks.js
 
       - name: Commit changes
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A data docs
           if git diff --staged --quiet; then
             echo "nothing changed"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "rebuild: $(find docs -name '*.html' | wc -l | tr -d ' ') pages"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Tell Bing, Yandex, Seznam and Naver what changed. Needs no account -
+      # ownership is proved by the key file served from the site itself.
+      - name: Ping IndexNow
+        if: steps.commit.outputs.changed == 'true'
+        run: node scripts/indexnow.js --changed || echo "indexnow ping failed, not fatal"
