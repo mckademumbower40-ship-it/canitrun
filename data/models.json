@@ -151,6 +151,23 @@
       ]
     },
     {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 1598.84,
+      "active_b": 1598.84,
+      "kv_kb_per_token": 122,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-04",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
       "id": "gemma-2-2b",
       "name": "Gemma 2 2B",
       "family": "Gemma",
