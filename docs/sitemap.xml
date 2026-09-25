@@ -32,6 +32,7 @@
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/mistral-small-24b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/mixtral-8x7b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/phi-4-14b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen3-0-6b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen2-5-1-5b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen2-5-3b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen2-5-7b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -45,6 +46,7 @@
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen2-5-coder-32b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen3-32b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen2-5-72b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/models/qwen3-8-2-4t-a95b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/macs/m1-8gb/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/macs/m1-16gb/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/macs/m1-pro-16gb/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -814,6 +816,33 @@
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/phi-4-14b-on-m4-max-48gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/phi-4-14b-on-m4-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/phi-4-14b-on-m4-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m1-8gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m1-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m1-pro-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m1-max-32gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m1-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-24gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-max-32gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-max-96gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-ultra-64gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m2-ultra-192gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-pro-18gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-max-36gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-ultra-96gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-ultra-256gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m3-ultra-512gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-24gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-32gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-pro-24gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-pro-48gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-pro-64gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-max-36gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-max-48gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-0-6b-on-m4-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-1-5b-on-m1-8gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-1-5b-on-m1-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-1-5b-on-m1-pro-16gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -1165,4 +1194,31 @@
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-72b-on-m4-max-48gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-72b-on-m4-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen2-5-72b-on-m4-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m1-8gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m1-16gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m1-pro-16gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m1-max-32gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m1-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-16gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-24gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-max-32gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-max-96gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-ultra-64gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m2-ultra-192gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-pro-18gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-max-36gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-ultra-96gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-ultra-256gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m3-ultra-512gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-16gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-24gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-32gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-pro-24gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-pro-48gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-pro-64gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-max-36gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-max-48gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-max-64gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mckademumbower40-ship-it.github.io/canitrun/can/qwen3-8-2-4t-a95b-on-m4-max-128gb/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

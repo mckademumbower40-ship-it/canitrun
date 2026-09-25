@@ -442,6 +442,22 @@
       ]
     },
     {
+      "id": "qwen3-0-6b",
+      "name": "Qwen3 0.6B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 0.75,
+      "active_b": 0.75,
+      "kv_kb_per_token": 112,
+      "max_ctx": 40960,
+      "license": "apache-2.0",
+      "released": "2025-04",
+      "tags": [
+        "dense",
+        "auto-discovered"
+      ]
+    },
+    {
       "id": "qwen2-5-1-5b",
       "name": "Qwen2.5 1.5B",
       "family": "Qwen",
@@ -640,6 +656,23 @@
       "released": "2024-09",
       "tags": [
         "heavy"
+      ]
+    },
+    {
+      "id": "qwen3-8-2-4t-a95b",
+      "name": "Qwen3.8 2.4T A95B",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 2446.18,
+      "active_b": 2446.18,
+      "kv_kb_per_token": 368,
+      "max_ctx": 131072,
+      "license": "other",
+      "released": "2026-08",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
       ]
     }
   ]
