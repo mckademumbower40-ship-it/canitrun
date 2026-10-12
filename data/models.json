@@ -134,6 +134,22 @@
       ]
     },
     {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 685.36,
+      "active_b": 37.44,
+      "kv_kb_per_token": 69,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2025-12",
+      "tags": [
+        "moe",
+        "auto-discovered"
+      ]
+    },
+    {
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek",
@@ -161,6 +177,23 @@
       "max_ctx": 131072,
       "license": "mit",
       "released": "2026-04",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 1650.5,
+      "active_b": 1650.5,
+      "kv_kb_per_token": 122,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-08",
       "tags": [
         "moe",
         "auto-discovered",
