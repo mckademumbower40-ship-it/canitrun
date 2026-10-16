@@ -50,6 +50,22 @@
       ]
     },
     {
+      "id": "deepseek-coder-v2-lite-base",
+      "name": "DeepSeek Coder V2 Lite Base",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 15.71,
+      "active_b": 2.77,
+      "kv_kb_per_token": 30,
+      "max_ctx": 131072,
+      "license": "other",
+      "released": "2024-06",
+      "tags": [
+        "moe",
+        "auto-discovered"
+      ]
+    },
+    {
       "id": "deepseek-r1-distill-qwen-32b",
       "name": "DeepSeek R1 Distill Qwen 32B",
       "family": "DeepSeek",
@@ -691,6 +707,22 @@
       "tags": [
         "moe",
         "fast-for-size"
+      ]
+    },
+    {
+      "id": "qwen3-coder-30b-a3b",
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "family": "Qwen",
+      "vendor": "Alibaba",
+      "params_b": 30.53,
+      "active_b": 3.34,
+      "kv_kb_per_token": 96,
+      "max_ctx": 131072,
+      "license": "apache-2.0",
+      "released": "2025-07",
+      "tags": [
+        "moe",
+        "auto-discovered"
       ]
     },
     {
