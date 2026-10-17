@@ -215,6 +215,23 @@
       ]
     },
     {
+      "id": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "DeepSeek",
+      "vendor": "DeepSeek",
+      "params_b": 763.21,
+      "active_b": 763.21,
+      "kv_kb_per_token": 80,
+      "max_ctx": 131072,
+      "license": "mit",
+      "released": "2026-10",
+      "tags": [
+        "moe",
+        "auto-discovered",
+        "needs-review"
+      ]
+    },
+    {
       "id": "deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "family": "DeepSeek",
